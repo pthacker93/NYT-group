@@ -1,9 +1,25 @@
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 var response = [];
+var term = ""; //prompt("Term");
+var sYear =""; //prompt("Start");
+var eYear = ""; //prompt("eEear");
+var records = 5;
+
+var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+var response = [];
 var term = "trump"; //prompt("Term");
 var sYear ="20170101"; //prompt("Start");
 var eYear = "20190101"; //prompt("eEear");
-var records = 5;
+var records = "5";
+
+$("#search").on("click", function(){
+    term = $(".search").val();
+    records = $(".num").val();
+    sYear = $(".start").val();
+    eYear = $(".end").val();
+    
+
+
 
 url +=
   "?" +
@@ -43,5 +59,6 @@ for (let i = 0; i < records; i++) {
   });
 
 
+    
+})
 
-  
