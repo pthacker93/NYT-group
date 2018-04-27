@@ -1,6 +1,15 @@
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 var response = [];
+$("#clear").on("click", function() {
+console.log("click")
+    $(".search").val("");
+    $(".num").val("");
+    $(".start").val("");
+    $(".end").val("");
 
+
+
+});
 $("#search").on("click", function() {
   term = $(".search").val();
   records = $(".num").val();
@@ -24,6 +33,7 @@ $("#search").on("click", function() {
     method: "GET"
   })
     .done(function(result) {
+      console.log(result);
       response = result.response.docs;
       var card = $("<div>");
       var head = $("<h3>");
