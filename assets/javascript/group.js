@@ -11,7 +11,7 @@ console.log("click")
 
 });
 $("#search").on("click", function() {
-   // $("#populate").empty();
+    $("#populate").empty();
    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
   var term = $(".search").val();
   var records = $(".num").val();
