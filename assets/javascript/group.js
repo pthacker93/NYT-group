@@ -11,10 +11,11 @@ console.log("click")
 
 });
 $("#search").on("click", function() {
+    $(".report").empty();
   term = $(".search").val();
   records = $(".num").val();
-  sYear = $(".start").val();
-  eYear = $(".end").val();
+  sYear = $(".start").val() +"0101"; 
+  eYear = $(".end").val() +"0101";
   console.log(term);
   console.log(records);
   console.log(sYear);
