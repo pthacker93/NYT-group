@@ -22,11 +22,11 @@ $("#search").on("click", function() {
   url +=
     "?" +
     $.param({
-      "api-key": "325ff8e5982c49678fea1bbc6766fa05",
+      "api-key": "b9f91d369ff59547cd47b931d8cbc56b:0:74623931",
       q: term,
       begin_date: sYear,
-      end_date: eYear,
-      fl: "headline, web_url, byline"
+      end_date: eYear
+      
     });
   $.ajax({
     url: url,
@@ -41,19 +41,12 @@ $("#search").on("click", function() {
 
       for (let i = 0; i < records; i++) {
         var current = response[i];
+       
+        
 
-        $(".report").append(
-          '<a href="' +
-            response[i].web_url +
-            '" target="_blank"><button type="button" class="btn btn-secondary btn-lg btn-block"><p id="articleName"><span id="articleNum">' +
-            (parseInt(i) + 1) +
-            "</span> " +
-            response[i].headline.main +
-            '</p><p id="articleAuthor"><span id="author">' +
-            response[i].byline.original +
-            "</span></p></button></a>"
-        );
-
+        
+        $(".report").append('<a href="'+response[i].web_url+'"><button type="button" class="btn btn-secondary btn-lg btn-block"><p id="articleName"><span id="articleNum">'+ (parseInt(i) + 1) +'</span>' + response[i].headline.main + '</p><p id="articleAuthor"><span id="author">'+ response[i].byline.original +'</span></p></button></a>')
+        
         console.log(response[i].web_url);
         console.log(response[i].headline.main);
         console.log(response[i].byline.original);
