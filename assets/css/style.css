@@ -1,0 +1,69 @@
+.jumbotron {
+  background-color: #223357;
+  color: #ffffff;
+  top: fixed;
+  text-align: center;
+}
+
+.title {
+  background-color: #2e3e4e;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  padding: 10px 10px;
+  width: 100%;
+}
+
+.input,
+.report {
+  border: 0.15em #2e3e4e solid;
+  margin: 20px 70px;
+  border-radius: 6px;
+  padding-bottom: 10px;
+}
+
+#form {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.row {
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+.btn {
+  background-color: #95a5a6;
+  color: white;
+  margin-left: 10px;
+  height: 40px;
+  text-align: center;
+}
+
+.report button {
+  background-color: #ecf0f1;
+  color: #2e3e4e;
+  text-align: left;
+  width: 98%;
+  margin: 15px;
+  height: 120px;
+}
+
+#articleNum {
+  background-color: #2e3e4e;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+#articleName {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#articleAuthor {
+  font-size: 15px;
+}
+
+#author {
+  text-transform: uppercase;
+}
