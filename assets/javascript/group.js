@@ -1,7 +1,7 @@
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 var response = [];
-$(".results").on("click", function() {
-console.log("click")
+$("#clear").on("click", function() {
+    
     $(".search").val("");
     $(".num").val("");
     $(".start").val("");
@@ -11,7 +11,7 @@ console.log("click")
 
 });
 $("#search").on("click", function() {
-    $("#populate").empty();
+   $("#populate").empty();
    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
   var term = $(".search").val();
   var records = $(".num").val();
