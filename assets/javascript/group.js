@@ -45,7 +45,7 @@ $("#search").on("click", function() {
         
 
         
-        $(".report").append('<a href="'+response[i].web_url+'"><button type="button" class="btn btn-secondary btn-lg btn-block"><p id="articleName"><span id="articleNum">'+ (parseInt(i) + 1) +'</span>' + response[i].headline.main + '</p><p id="articleAuthor"><span id="author">'+ response[i].byline.original +'</span></p></button></a>')
+        $(".report").append('<a href="'+response[i].web_url+'"target="_blank"><button type="button" class="btn btn-secondary btn-lg btn-block"><p id="articleName"><span id="articleNum">'+ (parseInt(i) + 1) +'</span>' + response[i].headline.main + '</p><p id="articleAuthor"><span id="author">'+ response[i].byline.original +'</span></p></button></a>')
         
         console.log(response[i].web_url);
         console.log(response[i].headline.main);
