@@ -1,6 +1,6 @@
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 var response = [];
-$("#clear").on("click", function() {
+$(".results").on("click", function() {
 console.log("click")
     $(".search").val("");
     $(".num").val("");
@@ -11,11 +11,12 @@ console.log("click")
 
 });
 $("#search").on("click", function() {
-    $(".report").empty();
-  term = $(".search").val();
-  records = $(".num").val();
-  sYear = $(".start").val() +"0101"; 
-  eYear = $(".end").val() +"0101";
+   // $("#populate").empty();
+   var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+  var term = $(".search").val();
+  var records = $(".num").val();
+  var sYear = $(".start").val() +"0101"; 
+  var eYear = $(".end").val() +"0101";
   console.log(term);
   console.log(records);
   console.log(sYear);
@@ -46,7 +47,7 @@ $("#search").on("click", function() {
         
 
         
-        $(".report").append('<a href="'+response[i].web_url+'"target="_blank"><button type="button" class="btn btn-secondary btn-lg btn-block"><p id="articleName"><span id="articleNum">'+ (parseInt(i) + 1) +'</span>' + response[i].headline.main + '</p><p id="articleAuthor"><span id="author">'+ response[i].byline.original +'</span></p></button></a>')
+        $("#populate").append('<a href="'+response[i].web_url+'"target="_blank"><button type="button" class="btn btn-secondary btn-lg btn-block"><p id="articleName"><span id="articleNum">'+ (parseInt(i) + 1) +'</span>' + response[i].headline.main + '</p><p id="articleAuthor"><span id="author">'+ response[i].byline.original +'</span></p></button></a>')
         
         console.log(response[i].web_url);
         console.log(response[i].headline.main);
